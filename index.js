@@ -1,7 +1,7 @@
 const input = document.querySelector("input")
 const btn = document.querySelector("button")
 const container = document.querySelector("#container")
-let apiKey = '660d9172'
+let apiKey = ''
 
 
 function searchMovies() {
