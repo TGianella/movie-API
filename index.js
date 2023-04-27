@@ -1,7 +1,7 @@
 const input = document.querySelector("input")
 const btn = document.querySelector("button")
 const container = document.querySelector("#container")
-let apiKey = ''
+let apiKey
 
 
 function searchMovies() {
@@ -14,7 +14,7 @@ function searchMovies() {
 
 async function fetchMovieDetails(param) {
   try {
-    const response = await fetch(`http://www.omdbapi.com/?i=${param}&apikey=${apiKey}`);
+    const response = await fetch(`https://www.omdbapi.com/?i=${param}&apikey=${apiKey}`);
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
     }
@@ -29,7 +29,7 @@ async function fetchMovieDetails(param) {
 
 async function fetchMovies(param) {
   try {
-    const response = await fetch(`http://www.omdbapi.com/?s=${param}&apikey=${apiKey}`);
+    const response = await fetch(`https://www.omdbapi.com/?s=${param}&apikey=${apiKey}`);
     console.log(response.url)
     if (!response.ok) {
       throw new Error(`HTTP error: ${response.status}`);
